@@ -75,7 +75,7 @@
           </div>
 
           <div class="mt-6 text-indigo-300 text-left lg:text-center">
-            {{ $t('Block_height_') }} #{{ $store.state.blockNumber }}
+            {{ $t('Block_height_') }} #{{ $store.state.blockNumber > 0 ? $store.state.blockNumber : 'loading...' }}
           </div>
         </div>
       </div>
