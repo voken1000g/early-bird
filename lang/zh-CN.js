@@ -36,6 +36,7 @@ export default {
   Get_1_to_10_percent_random_bonus_for_free: '免费获得 1%-10% 的随机奖励',
   Referral_address: '转介地址',
   Enter_a_valid_Voken_wallet_address: '输入有效的 Voken 钱包地址',
+  Bind: '绑定',
   Get_VokenTB: '获取 VokenTB',
 
   You_ve_already_got: '你已经获得',

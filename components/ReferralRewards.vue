@@ -108,7 +108,7 @@ export default {
       }
     },
     txHref(txHash) {
-      return 'https://kovan.etherscan.io/tx/' + txHash
+      return 'https://etherscan.io/tx/' + txHash
     }
   }
 }

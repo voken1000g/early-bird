@@ -36,6 +36,7 @@ export default {
   Get_1_to_10_percent_random_bonus_for_free: 'Get 1%-10% random bonus for FREE',
   Referral_address: 'Referral address',
   Enter_a_valid_Voken_wallet_address: 'Enter a valid Voken wallet address',
+  Bind: 'Bind',
   Get_VokenTB: 'Get VokenTB',
 
   You_ve_already_got: 'You\'ve already got',

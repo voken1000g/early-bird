@@ -1,5 +1,6 @@
 import { join } from 'path'
 
+// const baseUrl = '/'
 const baseUrl = '/early-bird/'
 
 export default {

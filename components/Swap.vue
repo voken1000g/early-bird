@@ -133,7 +133,7 @@
                     class="btn-bind"
                     @click="bind"
             >
-              Bind
+              {{ $t('Bind') }}
             </button>
 
             <button class="btn-swap"
@@ -373,7 +373,7 @@ export default {
     },
     paymentTxHref() {
       return (
-        'https://kovan.etherscan.io/tx/'
+        'https://etherscan.io/tx/'
         +
         this.$store.state.accountPayment.txHash
       )
