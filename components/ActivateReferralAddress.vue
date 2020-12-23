@@ -93,7 +93,7 @@
 
 <script>
 import fn from '~/utils/functions'
-import vokenAddress from '../utils/voken-address'
+import vokenAddress from '@voken/address'
 import LayoutForMobi from '~/components/LayoutForMobi'
 import LayoutBgA from '~/components/LayoutBgA'
 import TxInfo from '~/components/TxInfo'

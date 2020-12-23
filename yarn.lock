@@ -1720,6 +1720,20 @@
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
 
+"@voken/address@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@voken/address/-/address-1.0.1.tgz#9a9076803e53ef309530913fd8f9d01d7338e62e"
+  integrity sha512-2GKia2F8TPDbNn1ltcoHNz6Tj5Wxvk6p2qWqWcUDyEm8glKAp0190OjyRyRbLrHRG6r27xKlrS5lDDvBYyKP6w==
+  dependencies:
+    "@voken/base32" "^1.0.5"
+
+"@voken/base32@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@voken/base32/-/base32-1.0.5.tgz#19b2154d89e6723e4c149f6c7f59154be8a2c73c"
+  integrity sha512-uNEGgrz97MrW8yAjU4Hwje/l/HHsX3raTRoN1gORKpsTm6/n4cy2EJ0pD1lSWvo5I9/MZ6TCZ7A4Li9zr+ZoTg==
+  dependencies:
+    base-x "^3.0.8"
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/@vue/babel-helper-vue-jsx-merge-props/download/@vue/babel-helper-vue-jsx-merge-props-1.0.0.tgz?cache=0&sync_timestamp=1596768129236&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fbabel-helper-vue-jsx-merge-props%2Fdownload%2F%40vue%2Fbabel-helper-vue-jsx-merge-props-1.0.0.tgz#048fe579958da408fb7a8b2a3ec050b50a661040"
@@ -2316,6 +2330,13 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/balanced-match/download/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+
+base-x@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/base-x/-/base-x-3.0.8.tgz#1e1106c2537f0162e8b52474a557ebb09000018d"
+  integrity sha512-Rl/1AWP4J/zRrk54hhlxH4drNxPJXYUaKffODVI53/dAsV4t9fBxyxYKAVPU1XBHxYwOWP9h9H0hM2MVw4YfJA==
+  dependencies:
+    safe-buffer "^5.0.1"
 
 base64-js@^1.0.2:
   version "1.3.1"

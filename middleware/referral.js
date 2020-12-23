@@ -1,5 +1,5 @@
 import nuxtStorage from 'nuxt-storage'
-import vokenAddress from '~/utils/voken-address'
+import vokenAddress from '@voken/address'
 
 
 export default async function({ isDev, route, redirect }) {

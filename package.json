@@ -20,6 +20,8 @@
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/toast": "^3.3.1",
     "@tailwindcss/ui": "^0.5.0",
+    "@voken/address": "^1.0.1",
+    "@voken/base32": "^1.0.5",
     "bignumber.js": "^9.0.0",
     "bn.js": "^5.1.3",
     "detect-browser": "^5.2.0",

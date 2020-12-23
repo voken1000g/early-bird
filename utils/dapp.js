@@ -1,4 +1,3 @@
-import BN from 'bn.js'
 import BigNumber from 'bignumber.js'
 import vokenAddress from '~/utils/voken-address'
 import vokenTbAbi from './constants/vokenTb.json'

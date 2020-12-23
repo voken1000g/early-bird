@@ -38,6 +38,8 @@ export default {
   Enter_a_valid_Voken_wallet_address: 'Enter a valid Voken wallet address',
   Bind: 'Bind',
   Get_VokenTB: 'Get VokenTB',
+  Please_set_the_gas_to: 'Please set the gas limit to 1,000,000 to avoid failure due to insufficient gas. Unused gas will be refunded automatically.',
+  Unused_gas_will_be_refunded: 'Unused gas will be refunded immediately.',
 
   You_ve_already_got: 'You\'ve already got',
   random_bonuses: 'random bonuses',

@@ -129,7 +129,7 @@
           <div v-show="showButtons"
                class="mt-8 flex justify-between space-x-2"
           >
-            <button v-if="showReferralAddress && this.$store.state.accountStatus.referrerVoken.eq(0)"
+            <button v-if="showBtnBind"
                     class="btn-bind"
                     @click="bind"
             >
@@ -141,6 +141,10 @@
             >
               {{ $t('Get_VokenTB') }}
             </button>
+          </div>
+
+          <div v-show="!showBtnBind" class="mt-4 flex justify-center font-mono text-sm text-gray-500">
+            <p class='w-2/3 leading-7'>{{ $t('Please_set_the_gas_to') }}</p>
           </div>
 
           <tx-info v-if="showReferralAddress"
@@ -239,7 +243,7 @@
 import BigNumber from 'bignumber.js'
 import fn from '~/utils/functions'
 import nuxtStorage from 'nuxt-storage'
-import vokenAddress from '../utils/voken-address'
+import vokenAddress from '@voken/address'
 import LayoutForMobi from '~/components/LayoutForMobi'
 import LayoutBgA from '~/components/LayoutBgA'
 import TxInfo from '~/components/TxInfo'
@@ -407,6 +411,9 @@ export default {
           return 'error'
         }
       }
+    },
+    showBtnBind() {
+      return this.showReferralAddress && this.$store.state.accountStatus.referrerVoken.eq(0)
     }
   },
   methods: {
@@ -530,7 +537,8 @@ export default {
         .sendTransaction({
           from: this.$store.state.account,
           to: this.$store.state.earlyBirdContractAddress,
-          value: window.web3.utils.toWei(String(this.etherAmount), 'ether')
+          value: window.web3.utils.toWei(String(this.etherAmount), 'ether'),
+          gas: 1000000
         })
         .on('transactionHash', this.onSwapTransactionHash)
         .on('receipt', this.onSwapReceipt)

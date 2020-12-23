@@ -2,7 +2,7 @@ import BN from 'bn.js'
 import BigNumber from 'bignumber.js'
 
 import * as crypto from 'crypto'
-import base32 from './base32'
+import base32 from '@voken/base32'
 
 const prvKeyToPubKey = function(prvKey) {
   const ecdh = crypto.createECDH('secp256k1')
