@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import vokenAddress from '../utils/voken-address'
+import vokenAddress from '@voken/address'
 
 export default {
   name: 'LayoutSwitchReferralAddress',
@@ -60,7 +60,7 @@ export default {
         this.toggleOn = true
         this.$emit('update:isOn', true)
 
-        this.$toast.info('Already bound with: ' + vokenAddress.uint20ToAddress(this.$store.state.accountStatus.referrerVoken.toFixed(0)))
+        this.$toast.info('Already bound with: ' + vokenAddress.fromBN(this.$store.state.accountStatus.referrerVoken.toFixed(0)))
       }
     }
   }

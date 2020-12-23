@@ -315,7 +315,7 @@ export default {
       }
     },
     async referralAddress() {
-      this.vInt = vokenAddress.address2vint(this.referralAddress)
+      this.vInt = vokenAddress.addressToBN(this.referralAddress).toString()
       if (this.vInt && this.vInt !== '0') {
         await this.$store.state
           .vokenTbContract()

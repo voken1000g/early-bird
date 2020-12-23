@@ -117,7 +117,7 @@ export default {
   },
   watch: {
     async vokenAddress() {
-      this.vInt = vokenAddress.address2vint(this.vokenAddress)
+      this.vInt = vokenAddress.addressToBN(this.vokenAddress).toString()
 
       if (this.vInt && this.vInt !== '0') {
         console.log('this.vInt:', this.vInt)

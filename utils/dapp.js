@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js'
-import vokenAddress from '~/utils/voken-address'
+import vokenAddress from '@voken/address'
 import vokenTbAbi from './constants/vokenTb.json'
 import earlyBirdAbi from './constants/earlyBird.json'
 
@@ -64,7 +64,7 @@ class DApp {
           vokenBalance: new BigNumber(payload.vokenBalance),
 
           voken: new BigNumber(payload.voken),
-          vokenAddress: vokenAddress.uint20ToAddress(payload.voken),
+          vokenAddress: vokenAddress.fromBN(payload.voken),
           referrer: payload.referrer,
           referrerVoken: new BigNumber(payload.referrerVoken)
         }
