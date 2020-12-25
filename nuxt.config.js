@@ -4,18 +4,14 @@ import { join } from 'path'
 const baseUrl = '/early-bird/'
 
 export default {
-  /*
-  ** Nuxt rendering mode
-  ** See https://nuxtjs.org/api/configuration-mode
-  */
-  mode: 'spa',
+  ssr: false,
 
   /*
   ** 404 for SPA
   */
   generate: {
     dir: 'docs',
-    fallback: true
+    fallback: '404.html'
   },
 
   router: {
@@ -26,7 +22,7 @@ export default {
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
   */
-  target: 'server',
+  target: 'static',
 
   /*
   ** Headers of the page
@@ -91,26 +87,17 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
-    'nuxt-purgecss',
-    '@nuxtjs/moment'
+    'nuxt-purgecss'
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/axios',
     '@nuxtjs/toast',
     'nuxt-i18n',
     'nuxt-fontawesome'
   ],
-
-  /*
-  ** Axios
-  */
-  axios: {
-    //
-  },
 
   /*
   ** Toast
@@ -226,6 +213,44 @@ export default {
     */
     extend(config, ctx) {
       //
-    }
+    },
+
+    splitChunks: {
+      layouts: false,
+      pages: true,
+      commons: true
+    },
+
+    optimization: {
+      concatenateModules: true,
+      splitChunks: {
+        chunks: 'all',
+        automaticNameDelimiter: '.',
+        maxAsyncRequests: 30,
+        minSize: 20000,
+        maxSize: 1500000,
+        cacheGroups: {
+          elliptic: {
+            test: /node_modules[\\/]elliptic/,
+            chunks: 'all',
+            priority: 20,
+            name: true
+          },
+          browserifySign: {
+            test: /node_modules[\\/]browserify-sign/,
+            chunks: 'all',
+            priority: 20,
+            name: true
+          },
+          bnJs: {
+            test: /node_modules[\\/]bn\.js/,
+            chunks: 'all',
+            priority: 10,
+            name: true
+          },
+
+        }
+      }
+    },
   }
 }

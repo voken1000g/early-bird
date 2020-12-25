@@ -1,8 +1,13 @@
 /*!
-  * vue-router v3.4.3
+  * vue-router v3.4.9
   * (c) 2020 Evan You
   * @license MIT
   */
+
+/*!
+ * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
 
 /*!
  * JavaScript Cookie v2.2.1
@@ -39,13 +44,19 @@
  */
 
 /*!
+ * vue-i18n v8.22.2 
+ * (c) 2020 kazuya kawaguchi
+ * Released under the MIT License.
+ */
+
+/*!
  * vue-no-ssr v1.1.1
  * (c) 2018-present egoist <0x142857@gmail.com>
  * Released under the MIT License.
  */
 
 /*!
- * vuex v3.5.1
+ * vuex v3.6.0
  * (c) 2020 Evan You
  * @license MIT
  */
@@ -65,6 +76,6 @@ OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 
-/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
-//! moment.js
+/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
