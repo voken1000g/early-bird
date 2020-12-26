@@ -1,6 +1,6 @@
 <template>
   <div class="bg-indigo-800">
-    <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl">
+    <div class="max-w-2xl mx-auto py-16 px-4 sm:pt-24 sm:pb-16 lg:px-8 lg:max-w-7xl">
       <div class="px-0 sm:px-4 lg:px-0 lg:flex lg:justify-between lg:items-center">
         <div class="max-w-3xl">
           <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
@@ -22,7 +22,12 @@
             </li>
           </ul>
         </div>
+      </div>
 
+      <div class="mt-14 font-mono text-base text-center">
+        <a target="_blank" :href="$t('link.Learn_more_about_referral_system.href')" class="a-info">
+          <fa :icon="['fas', 'info-circle']" /> {{ $t('link.Learn_more_about_referral_system.text') }}
+        </a>
       </div>
     </div>
   </div>
@@ -41,5 +46,14 @@ export default {
 
 .rp-features-ul li {
   @apply leading-7;
+}
+
+
+.a-info {
+  @apply pb-2 px-2 text-indigo-200;
+}
+
+.a-info:hover {
+  @apply border-b border-indigo-300 text-indigo-300;
 }
 </style>

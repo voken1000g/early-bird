@@ -11,11 +11,15 @@ export default {
 
   Set_your_VOKEN_address: '设置你的 VOKEN 地址',
   VOKEN_wallet_address: 'VOKEN 钱包地址',
-  Not_a_VOKEN_wallet_address: '不是VOKEN钱包地址',
+  Not_a_VOKEN_wallet_address: '不是 VOKEN 钱包地址',
   The_address_is_already_exist: '该地址已经存在',
   Set_VOKEN_address: '设置 VOKEN 地址',
+  Generate_New_VOKEN_Address: '生成新的 VOKEN 地址',
+  Generate_New_Address__Mnemonic: '生成新的助记词/地址',
   You_dont_have_any_VOKEN: '你没有任何 VOKEN',
   Go_to_Early_bird_Sale: '进入早鸟销售',
+  Mnemonic__backup_phrase_: '助记词（备份短语）',
+  Please_write_the_mnemonic_: '请把助记词抄写在纸上，并确保放在安全的地方。',
 
   Referral_address_or_link: '推荐地址/链接',
   You_would_get_rewarded_from__: '你会从与你绑定的每一笔交易中得到回报。',

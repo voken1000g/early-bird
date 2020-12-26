@@ -1,24 +1,27 @@
 <template>
   <div>
     <hero-referral/>
-    <activate-referral-address v-if="$store.state.accountStatus.voken.eq(0)" />
+    <div v-if="this.$store.state.accountStatus.voken.eq(0)">
+      <referral-set-address />
+
+    </div>
     <div v-else>
       <referral-address/>
+      <referral-rewards class="bg-indigo-50"/>
     </div>
-    <referral-rewards class="bg-indigo-50"/>
   </div>
 </template>
 
 <script>
 import HeroReferral from '~/components/HeroReferral'
-import ActivateReferralAddress from '~/components/ActivateReferralAddress'
+import ReferralSetAddress from '~/components/ReferralSetAddress'
 import ReferralAddress from '~/components/ReferralAddress'
 import ReferralRewards from '~/components/ReferralRewards'
 
 export default {
-  name: "referral",
+  name: "wallet",
   layout: 'dapp',
-  components: { ReferralRewards, ReferralAddress, ActivateReferralAddress, HeroReferral }
+  components: { ReferralRewards, ReferralAddress, ReferralSetAddress, HeroReferral }
 }
 </script>
 

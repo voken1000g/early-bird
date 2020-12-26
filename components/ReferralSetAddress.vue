@@ -1,6 +1,6 @@
 <template>
   <layout-bg-a theme="RL">
-    <layout-for-mobi class="set-voken-address">
+    <layout-for-mobi class="set-voken-address py-6 md:py-8 lg:py-12 xl:py-14 2xl:py-20">
       <div class="py-8 px-6 bg-gradient-to-br from-red-100 to-orange-200 rounded-lg text-center">
         <h2 class="font-light text-3xl text-gray-700 text-center tracking-tight">
           {{ $t('referral.Set_your_VOKEN_address') }}
@@ -23,7 +23,7 @@
                      ref="referral-address"
                      class="form-input input-voken-address"
                      v-model="vokenAddress"
-                     :placeholder="$t('Enter_a_valid_Voken_wallet_address')"
+                     :placeholder="$t('Enter_a_valid_VOKEN_wallet_address')"
                      aria-describedby="referral-address">
 
               <div v-if="vokenAddressStatus === 'success'" class="input-icon">
@@ -48,7 +48,7 @@
             </div>
           </div>
 
-          <div v-show="showButton"
+          <div v-show="showButtonSet"
                class="mt-8 flex justify-between space-x-2"
           >
             <button class="btn-swap"
@@ -58,7 +58,17 @@
             </button>
           </div>
 
-          <tx-info :class="{'mt-4': showButton, 'mt-8': !showButton }"
+          <div v-show="showButtonNew"
+               class="mt-4 flex justify-between space-x-2"
+          >
+            <button class="btn-generate"
+                    @click="newVokenAddress"
+            >
+              {{ $t('referral.Generate_New_VOKEN_Address') }}
+            </button>
+          </div>
+
+          <tx-info :class="{'mt-4': showButtonSet, 'mt-8': !showButtonSet }"
                    :status="txStatus"
                    :hash="txHash"
                    :confirmation="txConfirmation"
@@ -80,8 +90,35 @@
             </nuxt-link>
           </div>
         </div>
+      </div>
 
-        <div class="mt-8 font-mono text-sm text-center">
+      <div v-show='mnemonic' class='mt-6 py-6 px-4 bg-gradient-to-br from-blue-50 to-indigo-200 rounded-md'>
+        <h2 class='text-2xl text-gray-600 text-center'>
+          {{ $t('referral.Mnemonic__backup_phrase_') }}
+        </h2>
+
+        <div class='w-5/6 mt-6 mx-auto font-mono text-red-600 text-center'>
+          {{ $t('referral.Please_write_the_mnemonic_') }}
+        </div>
+
+        <div class='mt-6 grid grid-cols-3 gap-3'>
+          <div v-for='(word, index) in mnemonicArray' class='mnemonic'>
+            <span class='mnemonic-index'>
+              {{ index + 1 }}.
+            </span>
+            <span class='mnemonic-word'>
+              {{ word }}
+            </span>
+          </div>
+        </div>
+
+        <button class="mt-6 btn-generate"
+                @click="newVokenAddress"
+        >
+          {{ $t('referral.Generate_New_Address__Mnemonic') }}
+        </button>
+
+        <div class="mt-6 font-mono text-sm text-center">
           <a target="_blank" :href="$t('link.Visit_VOKEN_Web_UI_wallet_toolkit.href')" class="a-info">
             <fa :icon="['fas', 'wallet']" /> {{ $t('link.Visit_VOKEN_Web_UI_wallet_toolkit.text') }}
           </a>
@@ -93,21 +130,28 @@
 
 <script>
 import fn from '~/utils/functions'
+import * as bip39 from 'bip39'
+import Wallet from '@voken/hd-wallet'
 import vokenAddress from '@voken/address'
 import LayoutForMobi from '~/components/LayoutForMobi'
 import LayoutBgA from '~/components/LayoutBgA'
 import TxInfo from '~/components/TxInfo'
+import LayoutW from '~/components/LayoutW'
 
 export default {
-  name: 'ActivateReferralAddress',
-  components: { TxInfo, LayoutBgA, LayoutForMobi },
+  name: 'ReferralSetAddress',
+  components: { LayoutW, TxInfo, LayoutBgA, LayoutForMobi },
   data() {
     return {
       vokenAddress: '',
       vInt: '0',
       referrer: null,
 
-      showButton: true,
+      showButtonSet: true,
+      showButtonNew: true,
+
+      mnemonic: '',
+      mnemonicArray: null,
 
       txStatus: -1,
       txHash: null,
@@ -120,8 +164,6 @@ export default {
       this.vInt = vokenAddress.addressToBN(this.vokenAddress).toString()
 
       if (this.vInt && this.vInt !== '0') {
-        console.log('this.vInt:', this.vInt)
-
         await this.$store.state
           .vokenTbContract()
           .methods
@@ -136,6 +178,9 @@ export default {
       } else {
         this.referrer = null
       }
+    },
+    async mnemonic() {
+      this.mnemonicArray = this.mnemonic.split(' ')
     }
   },
   computed: {
@@ -164,7 +209,7 @@ export default {
   },
   methods: {
     async setVokenAddress() {
-      this.showButton = false
+      this.showButtonSet = false
       this.txStatus = 0
       this.txMessage = null
 
@@ -211,19 +256,27 @@ export default {
     async onError(error) {
       this.txStatus = 3
       this.txMessage = error.message
-      this.showButton = true
+      this.showButtonSet = true
+    },
+    async newVokenAddress() {
+      this.showButtonNew = false
+
+      this.mnemonic = await bip39.generateMnemonic(192)
+      await this.generateFromMnemonic()
+    },
+    async generateFromMnemonic() {
+      const seed = await bip39.mnemonicToSeed(this.mnemonic)
+      const hdWallet = new Wallet(seed)
+      const wallet = hdWallet.derive(0)
+      this.vokenAddress = wallet.address
     }
   }
 }
 </script>
 
 <style scoped>
-.set-voken-address {
-  @apply py-20;
-}
-
 .input-voken-address {
-  @apply block w-full py-3 px-6 bg-white border border-gray-300 rounded-md;
+  @apply block w-full py-3 px-6 bg-white border border-gray-300 rounded-md font-mono;
 }
 
 .input-voken-address:focus {
@@ -299,6 +352,32 @@ export default {
 .btn-swap:active {
   @apply to-pink-500 shadow-outline-pink;
 }
+
+.btn-generate {
+  @apply from-blue-500 to-indigo-500;
+}
+
+.btn-generate:hover {
+  @apply to-indigo-600;
+}
+
+.btn-generate:active {
+  @apply to-indigo-500 shadow-outline-indigo;
+}
+
+
+.mnemonic {
+  @apply flex justify-between py-2 px-3 border-b-2 border-indigo-300 font-mono text-center;
+}
+
+.mnemonic-index {
+  @apply text-gray-500;
+}
+
+.mnemonic-word {
+  @apply w-full;
+}
+
 
 .a-referral-board {
   @apply w-full py-4 bg-gradient-to-r border border-transparent rounded-md shadow;

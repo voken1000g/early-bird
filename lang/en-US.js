@@ -35,7 +35,7 @@ export default {
   To_estimated_: 'To (estimated)',
   Get_1_to_10_percent_random_bonus_for_free: 'Get 1%-10% random bonus for FREE',
   Referral_address: 'Referral address',
-  Enter_a_valid_Voken_wallet_address: 'Enter a valid Voken wallet address',
+  Enter_a_valid_VOKEN_wallet_address: 'Enter a valid VOKEN wallet address',
   Bind: 'Bind',
   Get_VokenTB: 'Get VokenTB',
   Please_set_the_gas_to: 'Please set the gas limit to 1,000,000 to avoid failure due to insufficient gas. Unused gas will be refunded automatically.',

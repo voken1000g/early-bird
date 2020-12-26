@@ -35,7 +35,7 @@ export default {
   To_estimated_: '到（估计的）',
   Get_1_to_10_percent_random_bonus_for_free: '免费获得 1%-10% 的随机奖励',
   Referral_address: '转介地址',
-  Enter_a_valid_Voken_wallet_address: '输入有效的 Voken 钱包地址',
+  Enter_a_valid_VOKEN_wallet_address: '输入有效的 VOKEN 钱包地址',
   Bind: '绑定',
   Get_VokenTB: '获取 VokenTB',
   Please_set_the_gas_to: '请将 gas 上限设置为 1,000,000 避免 gas 不足导致交易失败。未用完的 gas 将自动退回。',

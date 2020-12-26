@@ -97,7 +97,7 @@
                      ref="referral-address"
                      class="form-input swap-input-referral-address"
                      v-model="referralAddress"
-                     :placeholder="$t('Enter_a_valid_Voken_wallet_address')"
+                     :placeholder="$t('Enter_a_valid_VOKEN_wallet_address')"
                      aria-describedby="referral-address">
 
               <div v-if="referralAddressStatus === 'success'" class="input-icon">

@@ -175,7 +175,7 @@ export default {
       {
         set: '@fortawesome/free-regular-svg-icons',
         icons: [
-          'faCheckCircle',
+          'faCheckCircle'
         ]
       },
       {
@@ -227,9 +227,14 @@ export default {
         chunks: 'all',
         automaticNameDelimiter: '.',
         maxAsyncRequests: 30,
-        minSize: 20000,
-        maxSize: 1500000,
+        maxSize: 2000000,
         cacheGroups: {
+          bnJs: {
+            test: /node_modules[\\/]bn\.js/,
+            chunks: 'all',
+            priority: 20,
+            name: true
+          },
           elliptic: {
             test: /node_modules[\\/]elliptic/,
             chunks: 'all',
@@ -241,16 +246,9 @@ export default {
             chunks: 'all',
             priority: 20,
             name: true
-          },
-          bnJs: {
-            test: /node_modules[\\/]bn\.js/,
-            chunks: 'all',
-            priority: 10,
-            name: true
-          },
-
+          }
         }
       }
-    },
+    }
   }
 }

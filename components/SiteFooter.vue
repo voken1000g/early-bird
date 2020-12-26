@@ -1,6 +1,6 @@
 <template>
   <div class="site-footer bg-gradient-to-b from-indigo-800 via-indigo-800 to-indigo-900">
-    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <layout-w class="py-12 lg:py-16">
       <div class="site-footer-grids xl:grid xl:grid-cols-3 xl:gap-8">
         <div class="grid grid-cols-2 gap-8 xl:col-span-2">
           <div class="md:grid md:grid-cols-2 md:gap-8">
@@ -122,13 +122,15 @@
           &copy; 2018-2020 Vision Network. All rights reserved.
         </p>
       </div>
-    </div>
+    </layout-w>
   </div>
 </template>
 
 <script>
+import LayoutW from '~/components/LayoutW'
 export default {
-  name: 'SiteFooter'
+  name: 'SiteFooter',
+  components: { LayoutW }
 }
 </script>
 

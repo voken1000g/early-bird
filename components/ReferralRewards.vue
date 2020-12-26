@@ -1,5 +1,5 @@
 <template>
-  <layout-bg-a theme="RL" class="pt-20 pb-32">
+  <layout-bg-a theme="RL" class="py-20">
     <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl text-center">
       <h2 class="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
         {{ $t('referral.Referral_rewards') }}
@@ -48,12 +48,6 @@
             </table>
           </div>
         </div>
-      </div>
-
-      <div class="mt-6 font-mono text-sm text-center">
-        <a target="_blank" :href="$t('link.Learn_more_about_referral_system.href')" class="a-info">
-          <fa :icon="['fas', 'info-circle']" /> {{ $t('link.Learn_more_about_referral_system.text') }}
-        </a>
       </div>
     </div>
   </layout-bg-a>
@@ -141,13 +135,5 @@ tbody tr td a {
 
 tbody tr td a:hover {
   @apply text-indigo-600 underline;
-}
-
-.a-info {
-  @apply pb-2 px-2 text-blue-500;
-}
-
-.a-info:hover {
-  @apply border-b border-blue-600 text-blue-600;
 }
 </style>

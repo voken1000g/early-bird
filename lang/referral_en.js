@@ -14,8 +14,13 @@ export default {
   Not_a_VOKEN_wallet_address: 'Not a VOKEN wallet address',
   The_address_is_already_exist: 'The address is already exist',
   Set_VOKEN_address: 'Set VOKEN address',
+  Generate_New_VOKEN_Address: 'Generate New VOKEN Address',
+  Generate_New_Address__Mnemonic: 'Generate New VOKEN Mnemonic/Address',
   You_dont_have_any_VOKEN: 'You don\'t have any VOKEN',
   Go_to_Early_bird_Sale: 'Go to Early-bird Sale',
+  Mnemonic__backup_phrase_: 'Mnemonic (backup phrase)',
+  Please_write_the_mnemonic_: 'Please write the mnemonic down on paper and make sure to keep it in a safe place.',
+
 
   Referral_address_or_link: 'Referral address / link',
   You_would_get_rewarded_from__: 'You would get rewarded from every transaction that is bound with you.',
