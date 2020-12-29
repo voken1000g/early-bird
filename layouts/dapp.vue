@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click='hideNavMenu'>
     <SiteNav/>
     <Nuxt/>
     <SiteFooter/>
@@ -12,7 +12,12 @@ import SiteFooter from '~/components/SiteFooter'
 
 export default {
   middleware: ['referral', 'dapp'],
-  components: { SiteFooter, SiteNav }
+  components: { SiteFooter, SiteNav },
+  methods: {
+    hideNavMenu() {
+      this.$store.dispatch('nav/HIDE_ALL')
+    }
+  }
 }
 
 </script>

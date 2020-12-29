@@ -9,14 +9,14 @@
               class="inline-flex items-center justify-center p-2 rounded-md text-indigo-400 hover:text-white hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700 focus:text-white transition duration-150 ease-in-out"
               aria-label="Main menu"
               aria-expanded="false"
-              @click="toggleMobileMenu"
+              @click.stop="toggleMobileMenu"
             >
               <!-- Icon when menu is closed. -->
-              <svg v-show="!mobileMenu" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg v-show="!$store.state.nav.menuMobile" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
               <!-- Icon when menu is open. -->
-              <svg v-show="mobileMenu" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg v-show="$store.state.nav.menuMobile" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
@@ -48,17 +48,17 @@
             </div>
           </div>
 
-          <!-- Profile  -->
+          <!-- Language  -->
           <div class="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center">
             <div class="relative">
-              <!-- Profile button -->
+              <!-- Language button -->
               <div>
                 <button
-                  class="flex text-2xl text-indigo-300 focus:outline-none focus:text-white transition duration-150 ease-in-out"
+                  class="flex text-3xl text-indigo-300 hover:text-white focus:outline-none focus:text-white transition duration-150 ease-in-out"
                   id="user-menu"
                   aria-label="User menu"
                   aria-haspopup="true"
-                  @click="toggleLangMenu"
+                  @click.stop="toggleLangMenu"
                 >
                   <fa :icon="['fas', 'globe-americas']" />
                 </button>
@@ -73,7 +73,7 @@
                 leave-class="transform opacity-100 scale-100"
                 leave-to-class="transform opacity-0 scale-95"
               >
-                <div v-show="langMenu"
+                <div v-show="$store.state.nav.languageMenu"
                      class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg z-50">
                   <div class="py-1 rounded-md bg-white shadow-xs"
                        role="menu"
@@ -97,9 +97,9 @@
     </layout-w>
 
     <!-- Mobile menu -->
-    <div class="md:hidden"
-         :class="{ block: mobileMenu, hidden: !mobileMenu }">
-      <div class="pt-2 pb-3">
+    <div class="md:hidden border-b border-indigo-700"
+         :class="{ block: $store.state.nav.menuMobile, hidden: !$store.state.nav.menuMobile }">
+      <div class="py-2">
         <div class="px-2 sm:px-3">
           <nuxt-link v-for="lang in languages"
                      :key="lang.name"
@@ -146,13 +146,12 @@ export default {
   },
   methods: {
     toggleLangMenu() {
-      this.langMenu = !this.langMenu
+      this.$store.dispatch('nav/TOGGLE_LANGUAGE_MENU')
     },
     toggleMobileMenu() {
-      this.mobileMenu = !this.mobileMenu
+      this.$store.dispatch('nav/TOGGLE_MENU_MOBILE')
     }
   }
-
 }
 </script>
 
