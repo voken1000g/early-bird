@@ -119,8 +119,8 @@
         </button>
 
         <div class="mt-6 font-mono text-sm text-center">
-          <a target="_blank" :href="$t('link.Visit_VOKEN_Web_UI_wallet_toolkit.href')" class="a-info">
-            <fa :icon="['fas', 'wallet']" /> {{ $t('link.Visit_VOKEN_Web_UI_wallet_toolkit.text') }}
+          <a target="_blank" :href="$t('link.Visit_Toolkit__VOKEN_wallet_generator.href')" class="a-info">
+            <fa :icon="['fas', 'wallet']" /> {{ $t('link.Visit_Toolkit__VOKEN_wallet_generator.text') }}
           </a>
         </div>
       </div>

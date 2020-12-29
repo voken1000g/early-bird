@@ -1,7 +1,7 @@
 export default {
-  Visit_VOKEN_Web_UI_wallet_toolkit: {
-    text: 'Visit VOKEN Web-UI wallet Toolkit',
-    href: 'https://voken1000g.github.io/web-ui-wallet'
+  Visit_Toolkit__VOKEN_wallet_generator: {
+    text: 'Visit Toolkit: VOKEN HD Wallet Generator',
+    href: 'https://voken1000g.github.io/toolkit/wallet-generator'
   },
 
   Learn_more_about_referral_system: {
@@ -19,9 +19,9 @@ export default {
     href: 'https://voken.io/en/latest/whitepaper/application_description_and_economic_model.html#voken'
   },
 
-  HD_Wallet_Toolkit: {
+  HD_Wallet_Generator: {
     text: 'HD Wallet Toolkit',
-    href: 'https://voken1000g.github.io/web-ui-wallet'
+    href: 'https://voken1000g.github.io/toolkit/wallet-generator'
   },
 
   Documentation: {

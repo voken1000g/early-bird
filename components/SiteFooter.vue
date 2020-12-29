@@ -32,8 +32,8 @@
               </h4>
               <ul class="mt-4">
                 <li>
-                  <a target="_blank" :href="$t('link.HD_Wallet_Toolkit.href')">
-                    {{ $t('link.HD_Wallet_Toolkit.text') }}
+                  <a target="_blank" :href="$t('link.HD_Wallet_Generator.href')">
+                    {{ $t('link.HD_Wallet_Generator.text') }}
                   </a>
                 </li>
                 <li>
