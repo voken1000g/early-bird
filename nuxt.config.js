@@ -81,22 +81,16 @@ export default {
   */
   components: true,
 
-  /*
-  ** Nuxt.js dev-modules
-  */
-  buildModules: [
-    '@nuxt/typescript-build',
-    '@nuxtjs/tailwindcss',
-    'nuxt-purgecss'
-  ],
-
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
     '@nuxtjs/toast',
     'nuxt-i18n',
     'nuxt-fontawesome'
+  ],
+  buildModules: [
+    '@nuxtjs/style-resources',
+    '@nuxt/typescript-build',
+    '@nuxtjs/tailwindcss',
+    'nuxt-purgecss'
   ],
 
   /*

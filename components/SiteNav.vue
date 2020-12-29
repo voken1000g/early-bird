@@ -81,10 +81,10 @@
                        aria-labelledby="user-menu"
                   >
                     <nuxt-link v-for="lang in languages"
-                               :key="lang.name"
-                               v-if="$i18n.locale !== lang.name"
+                               :key="lang.code"
+                               v-if="$i18n.locale !== lang.code"
                                class="profile-h"
-                               :to="switchLocalePath(lang.name)">
+                               :to="switchLocalePath(lang.code)">
                       {{ lang.title }}
                     </nuxt-link>
                   </div>
@@ -102,10 +102,10 @@
       <div class="py-2">
         <div class="px-2 sm:px-3">
           <nuxt-link v-for="lang in languages"
-                     :key="lang.name"
-                     v-if="$i18n.locale !== lang.name"
+                     :key="lang.code"
+                     v-if="$i18n.locale !== lang.code"
                      class="profile-v"
-                     :to="switchLocalePath(lang.name)">
+                     :to="switchLocalePath(lang.code)">
             {{ lang.title }}
           </nuxt-link>
         </div>
@@ -116,6 +116,7 @@
 
 <script>
 import fn from '../utils/functions'
+import locales from '~/utils/constants/locales'
 import LayoutW from '~/components/LayoutW'
 
 export default {
@@ -124,25 +125,11 @@ export default {
   data() {
     return {
       fn: fn,
-      languages: [
-        {
-          'name': 'en',
-          'title': 'English'
-        },
-        {
-          'name': 'zh',
-          'title': '简体中文'
-        }
-      ],
-
-      mobileMenu: false,
-      langMenu: false
+      languages: locales,
     }
   },
   computed: {
-    version() {
-      return this.$store.state.version
-    }
+    //
   },
   methods: {
     toggleLangMenu() {
