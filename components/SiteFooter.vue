@@ -37,6 +37,11 @@
                   </a>
                 </li>
                 <li>
+                  <a target="_blank" :href="$t('link.VOKEN_Address_Validator.href')">
+                    {{ $t('link.VOKEN_Address_Validator.text') }}
+                  </a>
+                </li>
+                <li>
                   <a target="_blank" :href="$t('link.Documentation.href')">
                     {{ $t('link.Documentation.text') }}
                   </a>

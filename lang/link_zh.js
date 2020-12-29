@@ -20,8 +20,13 @@ export default {
   },
 
   HD_Wallet_Generator: {
-    text: 'HD 钱包工具',
-    href: 'https://voken1000g.github.io/toolkit/wallet-generator'
+    text: 'HD 钱包生成器',
+    href: 'https://voken1000g.github.io/toolkit/zh/wallet-generator'
+  },
+
+  VOKEN_Address_Validator: {
+    text: 'VOKEN 地址验证器',
+    href: 'https://voken1000g.github.io/toolkit/zh/wallet-validator'
   },
 
   Documentation: {
