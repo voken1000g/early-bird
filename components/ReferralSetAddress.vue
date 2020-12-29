@@ -6,6 +6,17 @@
           {{ $t('referral.Set_your_VOKEN_address') }}
         </h2>
 
+        <div class='mt-8 w-14 h-14 mx-auto bg-white rounded-md shadow-md lg:shadow-lg'>
+          <img v-show='isAddress' :src='avatar.svgDataUriFromSeed(vokenAddress)' alt='address avatar'>
+          <div v-show='!isAddress'
+               class='h-full flex items-center justify-center text-2xl text-gray-300'
+               :class='{ "text-red-300": vokenAddressStatus === "error"}'
+          >
+            <fa v-show='!vokenAddress' :icon="['fas', 'seedling']" />
+            <fa v-show='vokenAddress && !isAddress' :icon="['fas', 'times']" />
+          </div>
+        </div>
+
         <div v-if="vokenBalance.gt(0)">
           <div class="mt-8"
                :class="vokenAddressStatus"
@@ -132,6 +143,7 @@
 import fn from '~/utils/functions'
 import * as bip39 from 'bip39'
 import Wallet from '@voken/hd-wallet'
+import avatar from '@voken/avatar'
 import vokenAddress from '@voken/address'
 import LayoutForMobi from '~/components/LayoutForMobi'
 import LayoutBgA from '~/components/LayoutBgA'
@@ -143,6 +155,8 @@ export default {
   components: { LayoutW, TxInfo, LayoutBgA, LayoutForMobi },
   data() {
     return {
+      avatar: avatar,
+
       vokenAddress: '',
       vInt: '0',
       referrer: null,
@@ -205,6 +219,9 @@ export default {
           return 'error'
         }
       }
+    },
+    isAddress() {
+      return this.vokenAddressStatus === 'success'
     }
   },
   methods: {

@@ -5,6 +5,13 @@ object-assign
 */
 
 /*!
+   * isobject <https://github.com/jonschlinkert/isobject>
+   *
+   * Copyright (c) 2014-2017, Jon Schlinkert.
+   * Released under the MIT License.
+   */
+
+/*!
   * vue-router v3.4.9
   * (c) 2020 Evan You
   * @license MIT

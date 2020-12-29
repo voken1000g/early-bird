@@ -19,6 +19,7 @@
     "@nuxtjs/toast": "^3.3.1",
     "@tailwindcss/ui": "^0.5.0",
     "@voken/address": "^1.0.6",
+    "@voken/avatar": "^1.2.0",
     "@voken/hd-wallet": "^1.0.5",
     "bignumber.js": "^9.0.1",
     "bip39": "^3.0.3",

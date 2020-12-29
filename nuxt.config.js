@@ -1,4 +1,5 @@
 import { join } from 'path'
+import locales from './utils/constants/locales'
 
 // const baseUrl = '/'
 const baseUrl = '/early-bird/'
@@ -105,18 +106,7 @@ export default {
    * i18n
    */
   i18n: {
-    locales: [
-      {
-        code: 'en',
-        iso: 'en-US',
-        file: 'en-US.js'
-      },
-      {
-        code: 'zh',
-        iso: 'zh-CN',
-        file: 'zh-CN.js'
-      }
-    ],
+    locales: locales,
     lazy: true,
     langDir: 'lang/',
     defaultLocale: 'en',
