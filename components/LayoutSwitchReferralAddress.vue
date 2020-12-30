@@ -60,7 +60,7 @@ export default {
         this.toggleOn = true
         this.$emit('update:isOn', true)
 
-        this.$toast.info('Already bound with: ' + vokenAddress.fromBN(this.$store.state.accountStatus.referrerVoken.toFixed(0)))
+        this.$toast.info('Already bound with: ' + vokenAddress.fromBNString(this.$store.state.accountStatus.referrerVoken.toFixed(0)))
       }
     }
   }

@@ -64,7 +64,7 @@ class DApp {
           vokenBalance: new BigNumber(payload.vokenBalance),
 
           voken: new BigNumber(payload.voken),
-          vokenAddress: vokenAddress.fromBN(payload.voken),
+          vokenAddress: vokenAddress.fromBNString(payload.voken),
           referrer: payload.referrer,
           referrerVoken: new BigNumber(payload.referrerVoken)
         }
@@ -76,8 +76,8 @@ class DApp {
       })
   }
 
-  async getVInt2Address(vint) {
-    await this._state.vokenTbContract().methods.vint2address(vint).call()
+  async getVoken2Address(vint) {
+    await this._state.vokenTbContract().methods.voken2address(vint).call()
       .then(address => {
         console.log('address:', address)
         return address
