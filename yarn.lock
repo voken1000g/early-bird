@@ -1438,13 +1438,13 @@
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
 
-"@voken/address@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@voken/address/-/address-1.3.0.tgz#f39ed25beb960aff2686ab8d2cd9fd80897170ec"
-  integrity sha512-jbklP+iawojQBPjj21dH3oCP/fCqMYiusB/5afovhQEjwm8lHFwQexsEBSMoyKtKd9PHmMpmHgol1pPG9HW3PA==
+"@voken/address@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@voken/address/-/address-1.3.2.tgz#bc78612556c1e33dbf1cddcd4571d3ee0eaa6881"
+  integrity sha512-BWiJW7XvL0oM2I66o/sMO1+NoKs/QhWkfgNUEvfUul2vnRLs8aDbjYOuV1Ip3k5Fsy1VJL0tuISM5fgK/AK3Ww==
   dependencies:
     "@voken/base32" "^1.3.1"
-    "@voken/public-key" "^1.0.0"
+    "@voken/public-key" "^1.0.2"
     "@voken/sha" "^1.1.0"
     bn.js "^5.1.3"
 
@@ -1463,19 +1463,19 @@
   dependencies:
     "@voken/sha" "^1.1.0"
 
-"@voken/hd-wallet@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@voken/hd-wallet/-/hd-wallet-1.1.2.tgz#21b7e55ee4c90eed66b6810f6946a891b7a898ba"
-  integrity sha512-S4XEIn9k0FcuyV6lBU/RZMseuZnl3GVwb8toDxph6qfNDj9Ye/+0GzHmXZgVlf0q5XtDiDWLaJ1gcayasCTm7A==
+"@voken/hd-wallet@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@voken/hd-wallet/-/hd-wallet-1.1.4.tgz#521cc4465e2cb0085fcf039d230934451361c0af"
+  integrity sha512-uPFFfBwTEfMCSjNWhipdlHiVm7HeEYtIEUoOGIBAFvdNKmoOAeo54KRH1xts0yzfCc1YYHUxy1YAIrtefEk6Xw==
   dependencies:
-    "@voken/address" "^1.3.0"
+    "@voken/address" "^1.3.2"
     "@voken/base32" "^1.3.1"
     hdkey "^2.0.1"
 
-"@voken/public-key@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@voken/public-key/-/public-key-1.0.0.tgz#0907b6a06ad395b66d997c95d1791a0edc6bc2f0"
-  integrity sha512-Qsa8LDWMUZ7cJqlaK607eaaryOZRsrH39CdZxm95pyh65Sxkv1NOimKfb4Pi93aP5Oh749cmH2CpPLNtIyyMww==
+"@voken/public-key@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@voken/public-key/-/public-key-1.0.2.tgz#98042c6fa090858ea7902e7cffb4ac842bf591b1"
+  integrity sha512-gmw0rYsuQYkiJt8Mf0V9i4se9E9CNah54ST+2LWuGWW5MhLd0R35+2LR64PDTgXA8SNHrlQkazVAnIa8QxjMog==
   dependencies:
     "@voken/base32" "^1.3.1"
     elliptic "^6.5.3"
