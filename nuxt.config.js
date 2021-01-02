@@ -153,7 +153,8 @@ export default {
           'faPlay',
           'faStop',
           'faBolt',
-          'faMapMarkerAlt'
+          'faMapMarkerAlt',
+          'faBug'
         ]
       },
       {
