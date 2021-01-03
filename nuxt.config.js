@@ -19,6 +19,10 @@ export default {
     base: baseUrl
   },
 
+  env: {
+    baseUrl: baseUrl,
+  },
+
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target

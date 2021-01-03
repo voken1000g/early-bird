@@ -69,17 +69,14 @@ export default {
       return this.$store.state.accountStatus.vokenAddress
     },
     referralLink() {
-      // return this.$route.path
-
       return (
         location.protocol + '//' + location.host
         +
-        '/early-bird'
+        process.env.baseUrl
         +
-        this.localePath({
-          name: 'index',
-          query: { r: this.$store.state.accountStatus.vokenAddress }
-        })
+        '?r='
+        +
+        this.$store.state.accountStatus.vokenAddress
       )
     },
   },
