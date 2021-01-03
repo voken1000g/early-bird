@@ -1,7 +1,7 @@
 export default {
   Visit_Toolkit__VOKEN_wallet_generator: {
     text: 'Visit Toolkit: VOKEN HD Wallet Generator',
-    href: 'https://voken1000g.github.io/toolkit/wallet-generator'
+    href: 'https://voken1000g.github.io/toolkit/wallet/generator'
   },
 
   Learn_more_about_referral_system: {
@@ -21,12 +21,12 @@ export default {
 
   HD_Wallet_Generator: {
     text: 'HD Wallet Generator',
-    href: 'https://voken1000g.github.io/toolkit/wallet-generator'
+    href: 'https://voken1000g.github.io/toolkit/wallet/generator'
   },
 
   VOKEN_Address_Validator: {
     text: 'VOKEN Address Validator',
-    href: 'https://voken1000g.github.io/toolkit/wallet-validator'
+    href: 'https://voken1000g.github.io/toolkit/wallet/validator'
   },
 
   Documentation: {

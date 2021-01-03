@@ -1,13 +1,10 @@
+import nav from './nav_en'
 import footer from './footer_en'
 import referral from './referral_en'
 import link from './link_en'
 
 export default {
-  nav: {
-    home: 'Home',
-    en: 'English',
-    cn: '简体中文'
-  },
+  nav: nav,
   footer: footer,
   referral: referral,
   link: link,

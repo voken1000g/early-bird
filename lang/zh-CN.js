@@ -1,13 +1,10 @@
+import nav from './nav_zh'
 import footer from './footer_zh'
 import referral from './referral_zh'
 import link from './link_zh'
 
 export default {
-  nav: {
-    home: '首页',
-    en: 'English',
-    cn: '简体中文'
-  },
+  nav: nav,
   footer: footer,
   referral: referral,
   link: link,

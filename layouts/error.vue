@@ -4,7 +4,7 @@
       <fa :icon="['fas', 'bug']" />
     </div>
 
-    <h1 class='mt-10 text-5xl text-red-700'>
+    <h1 class='mt-10 font-mono font-bold text-4xl'>
       Error
       {{ error.statusCode }}
     </h1>
@@ -18,7 +18,7 @@
 <script>
 export default {
   name: 'error',
-  layout: 'layoutError',
+  layout: 'redPolygon',
   props: ['error']
 }
 </script>

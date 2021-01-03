@@ -31,6 +31,17 @@
               VokenTB {{ $t('Early_bird_sale') }}
             </div>
           </nuxt-link>
+
+          <!-- navigations -->
+          <div class="hidden md:pl-4 md:flex md:items-center md:space-x-1">
+            <nuxt-link v-for="nav in navigations"
+                       :key='nav.path'
+                       :to='localePath(nav.path)'
+                       class="nav-h"
+            >
+              {{ $t('nav.' + nav.text) }}
+            </nuxt-link>
+          </div>
         </div>
 
         <div class="flex items-center">
@@ -99,8 +110,20 @@
     <!-- Mobile menu -->
     <div class="md:hidden border-b border-indigo-700"
          :class="{ block: $store.state.nav.menuMobile, hidden: !$store.state.nav.menuMobile }">
-      <div class="py-2">
-        <div class="px-2 sm:px-3">
+
+      <!-- navigations -->
+      <div class="p-3">
+        <nuxt-link v-for="nav in navigations"
+                   :key='nav.path'
+                   :to='localePath(nav.path)'
+                   class="nav-v"
+        >
+          {{ $t('nav.' + nav.text) }}
+        </nuxt-link>
+      </div>
+
+      <div class="py-3 border-t border-indigo-700">
+        <div class="px-3">
           <nuxt-link v-for="lang in languages"
                      :key="lang.code"
                      v-if="$i18n.locale !== lang.code"
@@ -118,6 +141,7 @@
 import fn from '../utils/functions'
 import locales from '~/utils/constants/locales'
 import LayoutW from '~/components/LayoutW'
+import navigations from '~/utils/constants/navigations'
 
 export default {
   name: 'SiteNav',
@@ -126,6 +150,7 @@ export default {
     return {
       fn: fn,
       languages: locales,
+      navigations: navigations,
     }
   },
   computed: {
@@ -160,7 +185,7 @@ export default {
   @apply outline-none text-white bg-indigo-700;
 }
 
-.nav-h.nuxt-link-exact-active {
+.nav-h.nuxt-link-active {
   @apply bg-indigo-900;
 }
 
@@ -181,7 +206,7 @@ export default {
   @apply outline-none text-white bg-indigo-700;
 }
 
-.nav-v.nuxt-link-exact-active {
+.nav-v.nuxt-link-active {
   @apply bg-indigo-900;
 }
 
