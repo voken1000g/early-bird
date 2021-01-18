@@ -22,6 +22,12 @@ class DApp {
     this._commit('SET_EARLY_BIRD_CONTRACT', new Contract(earlyBirdAbi, this._state.earlyBirdContractAddress))
   }
 
+  async getVokenBalance(account) {
+    return await this._state.vokenTbContract().methods.balanceOf(account).call().catch(error => {
+      console.error('::: [dApp] getVokenBalance', error)
+    })
+  }
+
   async getStatus() {
     await this._state
       .earlyBirdContract()

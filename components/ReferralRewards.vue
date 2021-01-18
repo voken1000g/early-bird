@@ -41,7 +41,7 @@
               </tr>
               <tr v-if="rewards.length === 0">
                 <td colspan="3">
-                  {{ $t('referral.No_Referrals') }}
+                  {{ $t('referral.No_referrals_yet') }}
                 </td>
               </tr>
               </tbody>

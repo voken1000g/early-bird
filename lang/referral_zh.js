@@ -31,5 +31,5 @@ export default {
   Transaction_hash: '交易散列',
   View: '查看',
 
-  No_Referrals: '没有推荐'
+  No_referrals_yet: '还没有推荐'
 }

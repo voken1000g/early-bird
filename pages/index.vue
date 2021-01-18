@@ -15,8 +15,8 @@ import DiveToReferral from '~/components/DiveToReferral'
 
 export default {
   name: 'index',
+  middleware: ['dapp'],
   components: { DiveToReferral, VokenProfile, Swap, HeroEarlyBird },
-  layout: 'dapp'
 }
 </script>
 

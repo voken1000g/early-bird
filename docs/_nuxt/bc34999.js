@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{256:function(e,o,n){"use strict";n.r(o),o.default={Home:"Home",Get_VokenTB:"Get VokenTB",Referral_System:"Referral System"}}}]);

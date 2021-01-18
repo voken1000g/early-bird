@@ -1,8 +1,8 @@
 <template>
   <div class="bg-indigo-800">
-    <div class="max-w-2xl mx-auto py-16 px-4 sm:pt-24 sm:pb-16 lg:px-8 lg:max-w-7xl">
+    <div class='resp-container border-t border-indigo-600 py-16 px-4 sm:py-24 sm:px-6 lg:px-8'>
       <div class="px-0 sm:px-4 lg:px-0 lg:flex lg:justify-between lg:items-center">
-        <div class="max-w-3xl">
+        <div class="w-full">
           <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
             {{ $t('referral.Referral_system') }}
           </h1>
@@ -34,8 +34,9 @@
 </template>
 
 <script>
+
 export default {
-  name: 'HeroReferral'
+  name: 'HeroReferral',
 }
 </script>
 

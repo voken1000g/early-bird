@@ -1,5 +1,6 @@
 export default {
   Home: '首页',
   Get_VokenTB: '获取 VokenTB',
-  Referral_System: '转介系统',
+  Set_VOKEN_Address: '设置 VOKEN 地址',
+  Referral: '推广',
 }

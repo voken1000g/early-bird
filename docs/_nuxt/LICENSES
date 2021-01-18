@@ -18,7 +18,7 @@ object-assign
   */
 
 /*!
- * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
@@ -64,8 +64,8 @@ object-assign
  */
 
 /*!
- * vue-i18n v8.22.2 
- * (c) 2020 kazuya kawaguchi
+ * vue-i18n v8.22.3 
+ * (c) 2021 kazuya kawaguchi
  * Released under the MIT License.
  */
 

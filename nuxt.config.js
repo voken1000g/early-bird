@@ -71,7 +71,8 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/css/main.scss'
+    '@/assets/css/main.scss',
+    '@/assets/css/common.scss'
   ],
 
   /*
@@ -218,8 +219,8 @@ export default {
         maxAsyncRequests: 30,
         maxSize: 2000000,
         cacheGroups: {
-          bnJs: {
-            test: /node_modules[\\/]bn\.js/,
+          web3: {
+            test: /node_modules[\\/]web3/,
             chunks: 'all',
             priority: 20,
             name: true
@@ -235,7 +236,13 @@ export default {
             chunks: 'all',
             priority: 20,
             name: true
-          }
+          },
+          bnJs: {
+            test: /node_modules[\\/]bn\.js/,
+            chunks: 'all',
+            priority: 20,
+            name: true
+          },
         }
       }
     }

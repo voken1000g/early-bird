@@ -1,8 +1,10 @@
 <template>
   <div class="bg-indigo-800">
-    <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl">
+    <div class='resp-container border-t border-indigo-600 py-16 px-4 sm:py-24 sm:px-6 lg:px-8'>
       <div class="px-0 sm:px-4 lg:px-0 lg:flex lg:justify-between lg:items-center">
-        <div class="max-w-xl">
+
+        <!-- text -->
+        <div class="max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-5xl">
           <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
             {{ $t('Early_bird_sale') }}
           </h1>
@@ -25,6 +27,8 @@
             </li>
           </ul>
         </div>
+
+        <!-- price -->
         <div class="mt-10 w-full max-w-xs lg:mt-0">
           <div>
             <div class="block text-base font-medium text-indigo-300">

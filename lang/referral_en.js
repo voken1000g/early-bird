@@ -32,5 +32,5 @@ export default {
   Transaction_hash: 'Transaction hash',
   View: 'View',
 
-  No_Referrals: 'No Referrals'
+  No_referrals_yet: 'No referrals yet'
 }

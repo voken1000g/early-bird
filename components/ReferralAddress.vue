@@ -20,8 +20,9 @@
                  ref="referral-address"
                  name="referral-address"
                  id="referral_address"
-                 class="form-input referral-input"
-                 :value="referralAddress">
+                 class="input-referral"
+                 :value="referralAddress"
+                 placeholder="Please set your VOKEN address first..." />
 
           <div class="absolute inset-y-0 right-0 pr-6 flex items-center">
             <button class="btn-copy" @click="copyReferralAddress">
@@ -43,8 +44,9 @@
                  ref="referral-link"
                  name="referral-link"
                  id="referral_link"
-                 class="form-input referral-input"
-                 :value="referralLink">
+                 class="input-referral"
+                 :value="referralLink"
+                 placeholder="Please set your VOKEN address first..." />
 
           <div class="absolute inset-y-0 right-0 pr-6 flex items-center">
             <button class="btn-copy" @click="copyReferralLink">
@@ -52,6 +54,12 @@
             </button>
           </div>
         </div>
+      </div>
+
+      <div v-show="vokenAddressNotSet" class="mt-12 lg:mt-14 xl:mt-16">
+        <nuxt-link :to="localePath('/set-voken')" class="w-full max-w-sm btn btn-pink py-4 font-bold text-lg">
+          Set VOKEN Address
+        </nuxt-link>
       </div>
     </div>
   </layout-bg-a>
@@ -65,10 +73,21 @@ export default {
   name: 'ReferralAddress',
   components: { LayoutForMobi, LayoutBgA },
   computed: {
+    vokenAddressNotSet() {
+      return this.$store.state.accountStatus.voken.eq(0)
+    },
     referralAddress() {
+      if (this.vokenAddressNotSet) {
+        return ''
+      }
+
       return this.$store.state.accountStatus.vokenAddress
     },
     referralLink() {
+      if (this.vokenAddressNotSet) {
+        return ''
+      }
+
       return (
         location.protocol + '//' + location.host
         +
@@ -106,12 +125,12 @@ export default {
 </script>
 
 <style scoped>
-.referral-input {
+.input-referral {
   @apply block w-full py-4 pl-4 pr-12 bg-white border-2 border-gray-300 rounded-md;
   @apply font-mono text-sm text-indigo-600;
 }
 
-.referral-input:focus {
+.input-referral:focus {
   @apply border-indigo-500 shadow-outline-indigo;
 }
 

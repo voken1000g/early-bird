@@ -4,7 +4,11 @@ export default [
     path: '/get'
   },
   {
-    text: 'Referral_System',
+    text: 'Set_VOKEN_Address',
+    path: '/set-voken'
+  },
+  {
+    text: 'Referral',
     path: '/referral'
   },
 ]

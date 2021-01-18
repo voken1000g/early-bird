@@ -1,5 +1,6 @@
 export default {
   Home: 'Home',
   Get_VokenTB: 'Get VokenTB',
-  Referral_System: 'Referral System',
+  Set_VOKEN_Address: 'Set VOKEN Address',
+  Referral: 'Referral',
 }

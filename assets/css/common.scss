@@ -1,0 +1,341 @@
+a,
+input[type=text],
+input[type=password],
+button,
+textarea {
+  @apply transition duration-150 ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    @apply outline-none;
+  }
+}
+
+input[type=text],
+input[type=password],
+textarea {
+  @apply border border-gray-300 rounded text-gray-700 shadow;
+
+  &:focus {
+    @apply border-gray-400 text-gray-800;
+  }
+}
+
+.resp-container {
+  @apply w-full mx-auto px-3;
+
+  @screen sm {
+    @apply px-4;
+  }
+
+  @screen md {
+    @apply px-6;
+  }
+
+  @screen lg {
+    @apply px-8;
+    @apply max-w-screen-lg;
+  }
+
+  @screen xl {
+    @apply max-w-screen-xl;
+  }
+
+  @screen 2xl {
+    @apply max-w-screen-2xl;
+  }
+}
+
+.resp-my {
+  @apply my-8;
+
+  @screen md {
+    @apply my-10;
+  }
+
+  @screen lg {
+    @apply my-12;
+  }
+
+  @screen xl {
+    @apply my-14;
+  }
+
+  @screen 2xl {
+    @apply my-16;
+  }
+}
+
+.resp-avatar {
+  @apply w-14 h-14 bg-white border border-gray-200 rounded shadow;
+
+  @screen lg {
+    @apply w-16 h-16 shadow-md;
+  }
+
+  @screen xl {
+    @apply w-20 h-20 rounded-md shadow-lg;
+  }
+}
+
+/**
+ * button
+ */
+.btn {
+  @apply block inline-flex items-center justify-center bg-gradient-to-r border rounded-md shadow;
+
+  @apply from-blue-500 to-indigo-500 border-indigo-500 text-indigo-50;
+
+  &:hover {
+    @apply to-indigo-600 border-indigo-600 text-white;
+  }
+
+  &:focus {
+    @apply shadow-outline-indigo;
+  }
+
+  &:active {
+    @apply to-indigo-500 border-indigo-500 shadow-outline-indigo;
+  }
+}
+
+.btn-light {
+  @apply from-cool-gray-50 to-cool-gray-50 border-cool-gray-300 text-cool-gray-700;
+
+  &:hover {
+    @apply from-cool-gray-600 to-cool-gray-700 border-cool-gray-700;
+  }
+
+  &:focus {
+    @apply shadow-outline-gray;
+  }
+
+  &:active {
+    @apply from-cool-gray-500 to-cool-gray-600 border-cool-gray-600 shadow-outline-gray;
+  }
+}
+
+.btn-pink {
+  @apply from-orange-500 to-pink-500 border-pink-500 text-pink-50;
+
+  &:hover {
+    @apply to-pink-600 border-pink-600;
+  }
+
+  &:focus {
+    @apply shadow-outline-pink;
+  }
+
+  &:active {
+    @apply to-pink-500 border-pink-500 shadow-outline-pink;
+  }
+}
+
+.btn-yellow {
+  @apply from-yellow-500 to-yellow-600 border-yellow-500 text-yellow-50;
+
+  &:hover {
+    @apply to-yellow-800 border-yellow-800;
+  }
+
+  &:focus {
+    @apply shadow-outline-yellow;
+  }
+
+  &:active {
+    @apply to-yellow-700 border-yellow-700 shadow-outline-yellow;
+  }
+}
+
+.btn-green {
+  @apply from-green-500 to-green-600 border-green-500 text-green-50;
+
+  &:hover {
+    @apply to-green-800 border-green-800;
+  }
+
+  &:focus {
+    @apply shadow-outline-green;
+  }
+
+  &:active {
+    @apply to-green-700 border-green-700 shadow-outline-green;
+  }
+}
+
+.btn-teal {
+  @apply from-teal-500 to-teal-600 border-teal-500 text-teal-50;
+
+  &:hover {
+    @apply to-teal-800 border-teal-800;
+  }
+
+  &:focus {
+    @apply shadow-outline-teal;
+  }
+
+  &:active {
+    @apply to-teal-700 border-teal-700 shadow-outline-teal;
+  }
+}
+
+.btn-purple {
+  @apply from-purple-600 to-purple-700 border-purple-600 text-purple-50;
+
+  &:hover {
+    @apply to-purple-800 border-purple-800;
+  }
+
+  &:focus {
+    @apply shadow-outline-purple;
+  }
+
+  &:active {
+    @apply to-purple-700 border-purple-700 shadow-outline-purple;
+  }
+}
+
+.btn-gray {
+  @apply from-cool-gray-700 to-cool-gray-800 border-cool-gray-600 text-cool-gray-50;
+
+  &:hover {
+    @apply from-cool-gray-800 to-cool-gray-900 border-cool-gray-900;
+  }
+
+  &:focus {
+    @apply shadow-outline-gray;
+  }
+
+  &:active {
+    @apply to-cool-gray-800 border-cool-gray-800 shadow-outline-gray;
+  }
+}
+
+/**
+ * indigo
+ */
+input[type=text].input-indigo,
+input[type=password].input-indigo,
+textarea.textarea-indigo {
+  @apply border border-indigo-300;
+
+  &:focus {
+    @apply border-indigo-500 shadow-outline-indigo;
+  }
+}
+
+a.a-indigo {
+  @apply text-indigo-700;
+
+  &:hover {
+    @apply text-indigo-500;
+  }
+}
+
+/**
+ * teal
+ */
+input[type=text].input-teal,
+input[type=password].input-teal,
+textarea.textarea-teal {
+  @apply border border-teal-300;
+
+  &:focus {
+    @apply border-teal-500 shadow-outline-teal;
+  }
+}
+
+
+/**
+ * ESW
+ */
+.fa-error,
+.fa-success,
+.fa-warn {
+  @apply hidden;
+}
+
+.error {
+  label {
+    @apply font-bold text-red-700;
+  }
+
+  input[type=text],
+  input[type=password],
+  textarea {
+    @apply bg-red-50 border-red-600 text-red-700;
+
+    &:focus {
+      @apply border-red-500 text-red-800 shadow-outline-red;
+    }
+  }
+
+  .fa-error {
+    @apply block text-red-700;
+  }
+}
+
+.success {
+  label {
+    @apply text-green-700;
+  }
+
+  input[type=text],
+  input[type=password],
+  textarea {
+    @apply bg-green-50 border-green-600 text-green-700;
+
+    &:focus {
+      @apply border-green-500 text-green-800 shadow-outline-green;
+    }
+  }
+
+  .fa-success {
+    @apply block text-green-700;
+  }
+}
+
+.warn {
+  label {
+    @apply text-yellow-700;
+  }
+
+  input[type=text],
+  input[type=password],
+  textarea {
+    @apply bg-yellow-50 border-yellow-600 text-yellow-700;
+
+    &:focus {
+      @apply border-yellow-500 text-yellow-800 shadow-outline-yellow;
+    }
+  }
+
+  .fa-warn {
+    @apply block text-yellow-700;
+  }
+}
+
+
+/**
+ * form group
+ */
+.btn-group {
+  @apply relative inline-flex;
+}
+
+.btn-group .btn {
+  @apply relative border-l-0 rounded-none;
+
+  &:first-child {
+    @apply border-l rounded-l-md;
+  }
+
+  &:last-child {
+    @apply rounded-r-md;
+  }
+}
+
+.btn-group .btn.selected {
+  @apply -mx-px;
+}

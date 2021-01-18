@@ -1,6 +1,6 @@
 <template>
   <nav class="bg-indigo-800">
-    <layout-w class="border-b border-indigo-700">
+    <div class='resp-container'>
       <div class="flex justify-between h-16">
         <div class="flex">
           <!-- Mobile menu button -->
@@ -105,7 +105,7 @@
           </div>
         </div>
       </div>
-    </layout-w>
+    </div>
 
     <!-- Mobile menu -->
     <div class="md:hidden border-b border-indigo-700"
@@ -140,12 +140,10 @@
 <script>
 import fn from '../utils/functions'
 import locales from '~/utils/constants/locales'
-import LayoutW from '~/components/LayoutW'
 import navigations from '~/utils/constants/navigations'
 
 export default {
   name: 'SiteNav',
-  components: { LayoutW },
   data() {
     return {
       fn: fn,
