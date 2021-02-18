@@ -41,7 +41,7 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
           repository-name: voken-get/voken-get.github.io
           commit-message: "${{ github.repository }}@${{ github.sha }}"
-          branch: main
+          branch: gh-pages
           folder: dist
 
       - name: clear
