@@ -1,8 +1,7 @@
 import { join } from 'path'
 import locales from './utils/constants/locales'
 
-// const baseUrl = '/'
-const baseUrl = '/early-bird/'
+const baseUrl = process.env.BASE_URL
 
 export default {
   ssr: false,
@@ -11,7 +10,7 @@ export default {
   ** 404 for SPA
   */
   generate: {
-    dir: 'docs',
+    dir: 'dist',
     fallback: '404.html'
   },
 
