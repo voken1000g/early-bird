@@ -1833,7 +1833,7 @@
     "@voken/sha" "^1.1.0"
     bn.js "^5.1.3"
 
-"@voken/avatar@^1.3.0", "@voken/avatar@^1.3.1":
+"@voken/avatar@^1.3.1":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@voken/avatar/-/avatar-1.3.1.tgz#0eff437616cbd57a7b60a7a3b762bb6e5330ca9d"
   integrity sha512-Zc7R7lKgws71rie0dj+q6p7cROov0zdSJ1shoinQ+rgQVuOeIRlhqHJA+VIA7Xz7Rvg7nsIva+7MlA8a+lXDEQ==
@@ -1872,12 +1872,12 @@
   dependencies:
     "@types/node" "^14.14.16"
 
-"@voken/vue-avatar@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@voken/vue-avatar/-/vue-avatar-1.1.0.tgz#599b666afb119f71281e323b726c5d8ea54d028c"
-  integrity sha512-C5zJebdKGicYltjdg8yd9k/nIhVYsIuipjNgM8w7Blx+yxgqb+p/YqeEb9LehRH5MiGSmLwPKf6RlYQ6As90Uw==
+"@voken/vue-avatar@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@voken/vue-avatar/-/vue-avatar-1.1.1.tgz#fea5b8665b6c4f72424f0ec144c14faf55b21c7f"
+  integrity sha512-4aT6ftx3N3cdRcNnf3Ec3Kp/vXGtTUqTz44DvmkQc06QaAO6ceLbn/RAij05SIZqRPq5w+B9FXCykgWtR2mubg==
   dependencies:
-    "@voken/avatar" "^1.3.0"
+    "@voken/avatar" "^1.3.1"
 
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
   version "1.2.1"
