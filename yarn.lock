@@ -1582,10 +1582,10 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/bn.js@^4.11.6":
-  version "4.11.6"
-  resolved "https://registry.yarnpkg.com/@types/bn.js/-/bn.js-4.11.6.tgz#c306c70d9358aaea33cd4eda092a742b9505967c"
-  integrity sha512-pqr857jrp2kPuO9uRjZ3PwnJTjoQy+fcdxvBTvHm6dkmEL9q+hDD/2j/0ELOBPtPnS8LjCX0gI9nbl8lVkadpg==
+"@types/bn.js@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@types/bn.js/-/bn.js-5.1.0.tgz#32c5d271503a12653c62cf4d2b45e6eab8cebc68"
+  integrity sha512-QSSVYj7pYFN49kW77o2s9xTCwZ8F2xLbjLLSEVh8D2F4JUhZtPAGOFLTD+ffqksBx/u4cE/KImFjyhqCjn/LIA==
   dependencies:
     "@types/node" "*"
 
@@ -1822,14 +1822,14 @@
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
 
-"@voken/address@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@voken/address/-/address-1.5.1.tgz#b20f24951db3ce9b2c2cda18cad6912d5dae9af1"
-  integrity sha512-sF+NtwgTKFLWltthXdRYE+2iIGc/8ew4zznZ5rSR3a9zpt+72bsKe8RwqPH0OgY+gJ0kdT+emp3KDM1h9iVTbQ==
+"@voken/address@^1.5.1", "@voken/address@^1.5.2":
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/@voken/address/-/address-1.5.2.tgz#ec84466fe9e8d7a136b42b8f92c53cf8acc16974"
+  integrity sha512-oipomAiaTz4UYuaQ/pEXgMyoCa2ll3L/dDLZzVIEdiRyHG6mB32srHYYO4Wf9Tp66IeZlAHobVMTjtcAc888jA==
   dependencies:
-    "@types/bn.js" "^4.11.6"
-    "@voken/base32" "^1.3.1"
-    "@voken/public-key" "^1.3.0"
+    "@types/bn.js" "^5.1.0"
+    "@voken/base32" "^1.3.3"
+    "@voken/public-key" "^1.3.1"
     "@voken/sha" "^1.1.0"
     bn.js "^5.1.3"
 
@@ -1841,12 +1841,12 @@
     "@dicebear/avatars" "^4.5.2"
     "@dicebear/avatars-jdenticon-sprites" "^4.5.2"
 
-"@voken/base32@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@voken/base32/-/base32-1.3.1.tgz#513a0c2b5d8c75ca607c469647c3e588d23cd61e"
-  integrity sha512-UAieKIG6MlYnNMXSIdGZCWUF763CVbf1+bu5EG7FLbftO29fuA/Akjq6PmRuGdd/x+QbI3m79pmqQFn1QbXHaw==
+"@voken/base32@^1.3.1", "@voken/base32@^1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@voken/base32/-/base32-1.3.3.tgz#21f6be13e2711a80f412b6737ee1c4ba107b7012"
+  integrity sha512-Racw9qLU2oxfCRtX1YIotT8d5bKh5GWLOcGkWrz+q8+RmxC4qF2lmk3jC0lnijDiP/F36ozXtBAmQxAHZykwhA==
   dependencies:
-    "@voken/sha" "^1.1.0"
+    "@voken/sha" "^1.1.9"
 
 "@voken/hd-wallet@^1.3.1":
   version "1.3.1"
@@ -1857,18 +1857,18 @@
     "@voken/base32" "^1.3.1"
     hdkey "^2.0.1"
 
-"@voken/public-key@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@voken/public-key/-/public-key-1.3.0.tgz#091b1b908fb009337346fada1c5399701e758226"
-  integrity sha512-K6DaVWSm1i8hw6frY1xmsBgqeaD1TptpnXIq/r2OmiXKczNit7cPAWTq8aXztQSW0jcdzijQqcbJPWH3utEiMg==
+"@voken/public-key@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@voken/public-key/-/public-key-1.3.1.tgz#782587a78bfdf62a92d911d8641e1344c5b0e480"
+  integrity sha512-ZvYAvFm14/6VdMjXVkvAapLMLAYq0CAZDvfufyhhYO3lcH4jTFII3MHBZud6OLTJe8DU+SxN5CpXGpHgYWgxTg==
   dependencies:
-    "@voken/base32" "^1.3.1"
+    "@voken/base32" "^1.3.3"
     elliptic "^6.5.3"
 
-"@voken/sha@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@voken/sha/-/sha-1.1.0.tgz#f7528e323d1504360a743d9567b57330bd79e2e4"
-  integrity sha512-Mu4PqsjZeNO6PtGSkDOaK5kCzNUXcLU6S10hqnaoiaakO/mpElk6VYjBkPAUqPZROK8Mp0xTkPVc9ym2uiojFg==
+"@voken/sha@^1.1.0", "@voken/sha@^1.1.9":
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/@voken/sha/-/sha-1.1.9.tgz#7574d3ea30cc79b5b691a3fe6a647502091c35f2"
+  integrity sha512-uUbPx6jToj/5970RQpTtaqcQplk3xurPPIcSvfvjfR0CHm9htAFaiMw3tgQx6yf3aWQuAwAJ/i0nL0JK+iy6LA==
   dependencies:
     "@types/node" "^14.14.16"
 
