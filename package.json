@@ -22,7 +22,7 @@
     "@tailwindcss/ui": "^0.7.2",
     "@voken/address": "^1.5.2",
     "@voken/avatar": "^1.3.1",
-    "@voken/hd-wallet": "^1.3.1",
+    "@voken/hd-wallet": "^1.3.2",
     "@voken/vue-avatar": "^1.1.1",
     "bignumber.js": "^9.0.1",
     "bip39": "^3.0.3",
