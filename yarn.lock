@@ -1833,10 +1833,10 @@
     "@voken/sha" "^1.1.0"
     bn.js "^5.1.3"
 
-"@voken/avatar@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@voken/avatar/-/avatar-1.3.0.tgz#7db82c1541168fd2fcb9fad743084eaaa09b80c1"
-  integrity sha512-xV2MZvlJC6Y9A/IoK7Llz+c7zqyHGE4jDj6KM3RgbM3aebpnXrWMcYDtTpLBWhcow65nIizutQjzkE/tJVaRKA==
+"@voken/avatar@^1.3.0", "@voken/avatar@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@voken/avatar/-/avatar-1.3.1.tgz#0eff437616cbd57a7b60a7a3b762bb6e5330ca9d"
+  integrity sha512-Zc7R7lKgws71rie0dj+q6p7cROov0zdSJ1shoinQ+rgQVuOeIRlhqHJA+VIA7Xz7Rvg7nsIva+7MlA8a+lXDEQ==
   dependencies:
     "@dicebear/avatars" "^4.5.2"
     "@dicebear/avatars-jdenticon-sprites" "^4.5.2"
