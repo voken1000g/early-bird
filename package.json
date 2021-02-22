@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.1",
-    "@nuxt/typescript-build": "^2.0.4",
+    "@nuxt/typescript-build": "^2.0.5",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/tailwindcss": "^3.4.2",
     "cross-env": "^7.0.3",
