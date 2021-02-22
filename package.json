@@ -40,7 +40,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/tailwindcss": "^3.4.2",
     "cross-env": "^7.0.3",
-    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-prettier": "^3.3.0",
     "fibers": "^5.0.0",
     "node-sass": "^5.0.0",
