@@ -30,7 +30,7 @@
     "detect-browser": "^5.2.0",
     "nuxt": "^2.15.2",
     "nuxt-fontawesome": "^0.4.0",
-    "nuxt-i18n": "^6.20.2",
+    "nuxt-i18n": "^6.20.3",
     "nuxt-storage": "^1.2.2",
     "vue-qr": "^2.3.0"
   },
