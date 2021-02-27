@@ -17,7 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@metamask/detect-provider": "^1.2.0",
     "@metamask/onboarding": "^1.0.0",
-    "@nuxt/typescript-runtime": "^2.0.1",
+    "@nuxt/typescript-runtime": "^2.0.2",
     "@nuxtjs/toast": "^3.3.1",
     "@tailwindcss/ui": "^0.7.2",
     "@voken/address": "^1.5.2",
