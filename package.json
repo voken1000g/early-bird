@@ -26,7 +26,7 @@
     "@voken/vue-avatar": "^1.1.1",
     "bignumber.js": "^9.0.1",
     "bip39": "^3.0.3",
-    "bn.js": "^5.1.3",
+    "bn.js": "^5.2.0",
     "detect-browser": "^5.2.0",
     "nuxt": "^2.15.2",
     "nuxt-fontawesome": "^0.4.0",
