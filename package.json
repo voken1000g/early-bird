@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "cross-env BASE_URL=/ nuxt-ts generate",
-    "start": "cross-env BASE_URL=/ nuxt-ts start",
-    "build-repo": "cross-env BASE_URL=/early-bird/ nuxt-ts generate",
-    "start-repo": "cross-env BASE_URL=/early-bird/ nuxt-ts start",
-    "export": "nuxt-ts export",
-    "serve": "nuxt-ts serve"
+    "build": "cross-env BASE_URL=/ nuxt generate",
+    "start": "cross-env BASE_URL=/ nuxt start",
+    "build-repo": "cross-env BASE_URL=/early-bird/ nuxt generate",
+    "start-repo": "cross-env BASE_URL=/early-bird/ nuxt start",
+    "export": "nuxt export",
+    "serve": "nuxt serve"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
@@ -17,7 +17,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@metamask/detect-provider": "^1.2.0",
     "@metamask/onboarding": "^1.0.0",
-    "@nuxt/typescript-runtime": "^2.0.2",
     "@nuxtjs/toast": "^3.3.1",
     "@tailwindcss/ui": "^0.7.2",
     "@voken/address": "^1.5.2",
