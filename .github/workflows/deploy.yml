@@ -50,7 +50,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          repository-name: voken-get/voken-get.github.io
+          repository-name: voken1000g/get.voken.io
           commit-message: "${{ github.repository }}@${{ github.sha }}"
           branch: main
           folder: dist
