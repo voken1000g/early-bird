@@ -1,7 +1,7 @@
 export default {
   Visit_Toolkit__VOKEN_wallet_generator: {
     text: '访问工具包：VOKEN HD 钱包生成器',
-    href: 'https://voken1000g.github.io/toolkit/zh/wallet/generator'
+    href: 'https://toolkit.voken.io/zh/wallet/generator'
   },
 
   Learn_more_about_referral_system: {
@@ -21,12 +21,12 @@ export default {
 
   HD_Wallet_Generator: {
     text: 'HD 钱包生成器',
-    href: 'https://voken1000g.github.io/toolkit/zh/wallet/generator'
+    href: 'https://toolkit.voken.io/zh/wallet/generator'
   },
 
   VOKEN_Address_Validator: {
     text: 'VOKEN 地址验证器',
-    href: 'https://voken1000g.github.io/toolkit/zh/wallet/validator'
+    href: 'https://toolkit.voken.io/zh/wallet/validator'
   },
 
   Documentation: {
